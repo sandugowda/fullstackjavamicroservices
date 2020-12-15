@@ -1,0 +1,13 @@
+package com.fullstack.oops.ocp;
+
+import com.fullstack.oops.srp.personnel.Employee;
+
+public class FulltimeTaxCalculator implements TaxCalculator {
+
+	@Override
+	public double calculateTax(Employee employee) {
+		// TODO Auto-generated method stub
+		return 0;
+	}
+
+}
