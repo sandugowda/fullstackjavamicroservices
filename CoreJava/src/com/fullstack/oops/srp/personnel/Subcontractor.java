@@ -6,6 +6,7 @@ public class Subcontractor {
 	private double monthlyIncome,nbHoursPerWeek;
 	
 	public Subcontractor(String fullName, double monthlyIncome,int nbHoursPerWeek) {
+		
 		setMonthlyIncome(monthlyIncome);
 		setNbHoursPerWeek(nbHoursPerWeek);
 		String [] names= fullName.split(" ");

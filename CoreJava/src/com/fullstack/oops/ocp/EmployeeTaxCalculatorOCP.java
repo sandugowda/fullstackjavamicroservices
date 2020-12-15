@@ -4,6 +4,7 @@ import com.fullstack.oops.srp.logging.ConsoleLogger;
 import com.fullstack.oops.srp.persistence.EmployeeRepository;
 import com.fullstack.oops.srp.persistence.FilePersistence;
 import com.fullstack.oops.srp.personnel.Employee;
+import com.fullstack.oops.srp.personnel.FulltimeEmployee;
 
 public class EmployeeTaxCalculatorOCP {
 
@@ -18,14 +19,24 @@ ConsoleLogger consoleLogger = new ConsoleLogger();
 		
 		Employee [] employees=repository.findAll();
 		
+		// employees[FullTimeEmployee,PartTimeEmployee,Intern]
+		
+		
+		
+		
 		// for(int i=0i<employees.length;i++){}
 
-		for(Employee e : employees) {
+		for(Employee employee : employees) {
+			// Factory Class with a factory method
+			TaxCalculator taxCalculator=TaxCalculatorFactory.create(employee);
+			double tax=taxCalculator.calculateTax(employee);
+			
 			
 			try {
-				repository.save(e);
+				repository.save(employee);
+				consoleLogger.writeInfo(employee.getFullName()+ " Total Tax For The Year = "+tax);
 				
-				consoleLogger.writeInfo("SavedEmployee "+e);
+				consoleLogger.writeInfo("SavedEmployee "+employee);
 			}catch(Exception exception) {
 				consoleLogger.writeError("Error Saving Employee",exception);
 				

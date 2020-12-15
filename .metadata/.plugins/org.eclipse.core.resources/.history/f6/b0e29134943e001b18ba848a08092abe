@@ -1,0 +1,25 @@
+package com.fullstack.oops.isp;
+
+import java.time.Month;
+
+import com.fullstack.oops.srp.personnel.Employee;
+public class Payslip implements ExportableText {
+
+	private String employeeName;
+	private double monthlyIncome;
+	private Month month;
+	
+	
+	public Payslip(Employee employee,Month month) {
+		this.employeeName = employee.getFullName();
+		this.monthlyIncome = employee.getMonthlyIncome();
+		this.month = month;
+	}
+	@Override
+	public String toTxt() {
+		// TODO Auto-generated method stub
+		return null;
+	}
+
+	
+}

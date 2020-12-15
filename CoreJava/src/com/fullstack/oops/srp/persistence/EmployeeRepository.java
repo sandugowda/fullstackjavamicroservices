@@ -24,7 +24,7 @@ public class EmployeeRepository {
 		
 		Employee employees[] = {
 				
-				new FulltimeEmployee("Sachin Tendulkar",-2000),
+				new FulltimeEmployee("Sachin Tendulkar",2000),
 				new FulltimeEmployee("Virat Kohli",1940),
 				new PartTimeEmployee("Rohit Sharma",1900),
 				new PartTimeEmployee("Jasprit Bumrah",1600),

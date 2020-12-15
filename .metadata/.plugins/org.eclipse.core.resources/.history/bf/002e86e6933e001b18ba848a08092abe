@@ -1,0 +1,11 @@
+package com.fullstack.oops.isp;
+
+public class Payslip implements ExportableText {
+
+	@Override
+	public byte[] toPdf() {
+		// TODO Auto-generated method stub
+		return null;
+	}
+
+}
