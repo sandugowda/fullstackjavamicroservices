@@ -1,0 +1,10 @@
+package com.fullstack.oops.ocp;
+
+public class EmployeeTaxCalculatorOCP {
+
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+
+	}
+
+}

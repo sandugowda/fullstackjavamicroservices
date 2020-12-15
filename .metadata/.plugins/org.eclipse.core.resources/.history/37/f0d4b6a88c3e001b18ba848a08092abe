@@ -1,0 +1,17 @@
+package com.fullstack.oops.ocp;
+
+import com.fullstack.oops.srp.personnel.Employee;
+import com.fullstack.oops.srp.personnel.FulltimeEmployee;
+
+public class TaxCalculatorFactory {
+	
+	public static TaxCalculator create(Employee employee) {
+		
+		if(employee instanceof FulltimeEmployee) {
+			return new FullTimeEmployeeTaxCalculator();
+			
+		}
+		
+	}
+
+}
